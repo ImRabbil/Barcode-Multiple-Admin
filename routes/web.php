@@ -26,3 +26,13 @@ Route::get('/newdata','HomeController@InsertData');
 Route::post('/DataInsert','HomeController@DataAdded');
 Route::get('all-barcode','HomeController@Barcode')->name('barcode');
 Route::post('/create','HomeController@Store');
+
+
+
+Route::group(['prefix'=>'admin','middleware'=>['admin','auth'],'namespace'=>'admin'],function(){ 
+    Route::get('dashboard','AdminController@index')->name('admin.dashboard');
+});
+
+Route::group(['prefix'=>'user','middleware'=>['user','auth'],'namespace'=>'user'],function(){ 
+    Route::get('dashboard','UserController@index')->name('user.dashboard');
+});

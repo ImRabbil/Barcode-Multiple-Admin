@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -22,7 +22,7 @@
                         </div>
                     @endif
                     <h1>
-                         {{ __('Hello Laravel! Im Employee ') }}
+                         {{ __('Hello Laravel! Im Create Admin ') }}
                         
                     </h1>
 
@@ -33,3 +33,4 @@
     </div>
 </div>
 @endsection
+ --}}

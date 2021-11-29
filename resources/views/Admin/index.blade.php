@@ -22,7 +22,7 @@
                         </div>
                     @endif
                     <h1>
-                         {{ __('Hello Laravel! Im Employee ') }}
+                         {{ __('Hello Laravel! Im Normal Admin ') }}
                         
                     </h1>
 

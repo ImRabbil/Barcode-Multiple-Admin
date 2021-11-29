@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-            <form method="post" action="{{URL::to('/create')}}">
+   <form method="post" action="{{URL::to('/create')}}">
 
         @csrf
 
@@ -15,8 +15,8 @@
   <label for="fname">Name:</label><br>
   <input  class="col-md-6" type="text"  name="name"><br>
 
-  {{-- <label for="fname">Barcode:</label><br>
-  <input class="col-md-6"   type="text"  name="barcode"><br> --}}
+  <label for="fname">Barcode:</label><br>
+  <input class="col-md-6"   type="text"  name="barcode"><br>
 
     <label for="fname">Book Code:</label><br>
   <input class="col-md-6"   type="text"  name="bookcode"><br>
@@ -41,7 +41,7 @@
 			<th>id</th>
 			<th>Name</th>
 			<th>Barcode</th>
-			{{-- <th>Book Code</th> --}}
+			<th>Book Code</th>
 			<th>Email</th>
 			<th>Phone</th>
 			
@@ -54,7 +54,7 @@
 				{{ $row->bookcode}}
 
 			</td>
-			{{-- <td>{{ $row->bookcode}}</td> --}}
+			<td>{{ $row->bookcode}}</td>
 			<th>{{ $row->email}}</td>
 			<td>{{ $row->phone}}</td>
 			<td>
@@ -63,6 +63,21 @@
 		</tr>
 		@endforeach
 	</table>
+
+	{{-- 
+		@foreach($contracts as $row)
+		{{ $row->name}} <br>
+
+		{!! $row->barcode !!}
+				{{ $row->bookcode}}<br>
+
+		@endforeach
+		 --}}
+	
+
+
+
+
         
 
     </div>
